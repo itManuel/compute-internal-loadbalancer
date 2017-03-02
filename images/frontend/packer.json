@@ -81,7 +81,8 @@
 
             "systemctl enable consul_servers.service",
             "systemctl enable frontend.service",
-            "systemctl enable dnsmasq"
+            "systemctl enable dnsmasq",
+            "sed '1,$s/#prepend domain-name-servers/prepend domain-name-servers/' /etc/dhcp/dhclient.conf > /tmp/temporalito && mv /tmp/temporalito /etc/dhcp/dhclient.conf"
       ]
     },
     {
