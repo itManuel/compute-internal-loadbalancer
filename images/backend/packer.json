@@ -73,7 +73,7 @@
 
             "systemctl enable consul_servers.service",
             "systemctl enable backend.service",
-            "sed '1,$s/#prepend domain-name .*/append domain-name \"c.gcumulus-xpn-host-001.internal.\";/' /etc/dhcp/dhclient.conf > /tmp/temporalito && mv /tmp/temporalito /etc/dhcp/dhclient.conf && service networking restart"
+            "sed '1,$s/#supersede domain-name .*/append domain-name \" 2nd.project.domain.name\";/' /etc/dhcp/dhclient.conf > /tmp/temporalito && mv /tmp/temporalito /etc/dhcp/dhclient.conf && service networking restart"
       ]
     }
   ]
